@@ -5,9 +5,6 @@
 -->
 <resources>
 
-    <!-- Whether device supports Power Efficient Workqueue -->
-    <bool name="config_deviceSupportsPowerEfficientWorkqueue">true</bool>
-
     <!-- Whether device supports Anti-Flicker -->
     <bool name="config_deviceSupportsAntiFlicker">true</bool>
 

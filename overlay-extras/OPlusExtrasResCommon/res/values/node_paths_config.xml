@@ -5,9 +5,6 @@
 -->
 <resources>
 
-    <!-- Power Efficient Workqueue sysfs node path -->
-    <string name="node_power_efficient_workqueue_switch" translatable="false">/sys/module/workqueue/parameters/power_efficient</string>
-
     <!-- Anti-Flicker sysfs node path -->
     <string name="node_antiflicker_switch" translatable="false">/sys/kernel/oplus_display/dimlayer_bl_en</string>
     <string name="node_antiflicker_switch_true">1</string>
