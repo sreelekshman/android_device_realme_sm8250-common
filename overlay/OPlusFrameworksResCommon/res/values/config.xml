@@ -134,6 +134,7 @@
          Spline interpolation is used to determine the auto-brightness
          backlight values for lux levels between these control points.
          Must be overridden in platform specific overlays -->
+
     <integer-array name="config_autoBrightnessLevels">
         <item>1</item>
         <item>4</item>
