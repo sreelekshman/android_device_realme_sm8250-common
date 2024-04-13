@@ -309,19 +309,13 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libstagefrighthw
 
-# OPlusExtras
-PRODUCT_PACKAGES += \
-    OPlusExtras
-
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
-    EvolutionFrameworksResCommon \
     FrameworksResTarget \
     OPlusCarrierConfigResCommon \
-    OPlusExtrasResCommon \
     OPlusFrameworksResCommon \
     OPlusNfcResCommon \
     OPlusSettingsResCommon \
