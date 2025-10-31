@@ -19,7 +19,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/oneplus/sm8250-common',
+    'device/realme/sm8250-common',
     'hardware/oplus',
     'hardware/qcom-caf/sm8250',
     'hardware/qcom-caf/wlan',
@@ -57,6 +57,8 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'vendor/etc/msm_irqbalance.conf': blob_fixup()
         .regex_replace('IGNORED_IRQ=27,23,38$', 'IGNORED_IRQ=27,23,38,115,332'),
+    ('odm/lib64/libCOppLceTonemapAPI.so', 'odm/lib64/libYTCommon.so', 'odm/lib64/libaps_frame_registration.so'): blob_fixup()
+        .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     'vendor/lib64/hw/camera.qcom.so': blob_fixup()
         .add_needed('libcamera_metadata_shim.so'),
     'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()

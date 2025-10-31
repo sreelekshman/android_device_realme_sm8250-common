@@ -616,7 +616,6 @@ odm/lib64/libAncHumanSegFigureFusion.so
 odm/lib64/libAncSegBaseSdk.so
 odm/lib64/libAncSegmentSdk.so
 odm/lib64/libBokehPre.so
-odm/lib64/libCNamaSDK_vendor.so
 odm/lib64/libCOppLceTonemapAPI.so
 odm/lib64/libCaptureBokeh.so
 odm/lib64/libDeVIS.so
@@ -761,12 +760,12 @@ odm/lib64/libsymphonypower.so
 odm/lib64/libtriplecam_image_optical_zoom.so
 odm/lib64/libtriplecam_optical_zoom_control.so
 odm/lib64/libtriplecam_video_optical_zoom.so
-odm/lib64/libui.so
+odm/lib64/libui.so;MODULE_SUFFIX=_odm
 odm/lib64/libvl53l1_daemon.so
 odm/lib64/libwatermark_photo.so
 odm/lib64/sensors.hal.tof.so
 odm/lib64/vendor.oplus.hardware.cameraextension@1.0-service-impl.so
-odm/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
+odm/lib64/vendor.oplus.hardware.cammidasservice@1.0.so;MODULE_SUFFIX=_odm
 odm/lib64/vendor.oplus.hardware.orms@1.0.so
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib/libextcamera_client.so
@@ -1013,7 +1012,7 @@ vendor/lib64/vendor.display.postproc@1.0.so
 
 # DPM
 system_ext/bin/dpmd
-system_ext/bin/tcmd
+#system_ext/bin/tcmd
 system_ext/etc/dpm/dpm.conf
 system_ext/etc/init/dpmd.rc
 system_ext/etc/init/tcmd.rc
@@ -1077,7 +1076,7 @@ odm/lib64/anc.hal.so
 odm/lib64/libgf_hal_G3.so
 odm/lib64/libgf_hal_G5.so
 odm/lib64/librpmbengclient.so
-odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so
+odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so;MODULE_SUFFIX=_odm
 odm/lib64/vendor.oplus.hardware.commondcs@1.0.so
 vendor/lib64/libhvx_proxy_stub.so
 
@@ -1126,14 +1125,12 @@ vendor/lib64/hw/vulkan.adreno.so|2f95eb6def7fc61d9f9fc9b58388657689644aec
 
 # Graphics (Misc) - from Driver Full 744.12 (tryigit.dev)
 vendor/lib/libOpenCL_adreno.so|042fc23bb794f42a299851a0493a2ea0e0f8e964
-vendor/lib/libadreno_app_profiles.so|c675243cc590091d5b520667fd9ea8b7dbb4c7c1
-vendor/lib/libdmabufheap.so|204ed0a78a49e9c0d5a45a40de979ccc16d25d16
+vendor/lib/libdmabufheap.so|204ed0a78a49e9c0d5a45a40de979ccc16d25d16;MODULE_SUFFIX=_vendor
 vendor/lib/libgpudataproducer.so|17dbc2bd1d212a6d3554c8c9f207060d25658370
 vendor/lib/libkernelmanager.so|e8a22a29270dc4dae241f602fc55233500270c1e
 vendor/lib/libllvm-qgl.so|9a507fad7428d79b81b22aa6b6ae30ab9ef99020
 vendor/lib64/libOpenCL_adreno.so|4ab8b26094374e2e048db90fe8f3a463f0b9b780
-vendor/lib64/libadreno_app_profiles.so|5492b11b9c5e23d029d22a3adfff254bf9a81320
-vendor/lib64/libdmabufheap.so|f6b2fc871d172e29ab98743a3c32af19be6d247d
+vendor/lib64/libdmabufheap.so|f6b2fc871d172e29ab98743a3c32af19be6d247d;MODULE_SUFFIX=_vendor
 vendor/lib64/libkernelmanager.so|c0d0089f1d1fe98318ea1127c4846ea67eeec028
 vendor/lib64/libllvm-qgl.so|d3ff4746923cd7b063624eaab01a6b2b39ea9aff
 
@@ -1166,7 +1163,6 @@ vendor/etc/lowi.conf
 vendor/etc/sap.conf
 vendor/etc/xtra_root_cert.pem
 vendor/etc/xtwifi.conf
-vendor/lib/liblocdiagiface.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
 vendor/lib64/libaoa.so
@@ -1191,7 +1187,6 @@ vendor/lib64/libloc_socket.so
 vendor/lib64/liblocation_api.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
-vendor/lib64/liblocdiagiface.so
 vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libminksocket.so
@@ -1360,7 +1355,7 @@ odm/lib64/libosensehalclient.so
 odm/lib64/vendor.oplus.hardware.osense.client@1.0.so
 
 # Perf
-odm/lib64/vendor.oplus.hardware.performance@1.0.so
+odm/lib64/vendor.oplus.hardware.performance@1.0.so;MODULE_SUFFIX=_odm
 vendor/etc/smomo_setting.xml
 vendor/lib/vendor.oplus.hardware.performance@1.0.so
 
@@ -1393,7 +1388,6 @@ vendor/etc/seccomp_policy/qti-systemd.policy
 vendor/etc/sec_config
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
-vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libqcci_legacy.so
 vendor/lib/libqcmaputils.so
@@ -1593,7 +1587,7 @@ system_ext/lib64/vendor.qti.ims.callcapability@1.0.so|19abbc2a16967f78f25bcb6f62
 system_ext/lib64/vendor.qti.ims.callinfo@1.0.so|5c244a803bf3bb5f9e41a53017c0306f17457c9f
 system_ext/lib64/vendor.qti.ims.factory@1.0.so|e174bd8039b81b5cefad01c89f3a5ae10b5b6cae
 system_ext/lib64/vendor.qti.ims.factory@1.1.so|9a6df30401edfbbae0666d103a8ebd7efa088479
-system_ext/lib64/vendor.qti.ims.factory@2.0.so|b91147f99ddc3aafdd663fd52289bcc7b9f9adc3
+#system_ext/lib64/vendor.qti.ims.factory@2.0.so|b91147f99ddc3aafdd663fd52289bcc7b9f9adc3
 system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so|0f8cabb8ef806345a081af6ca2fefa04e7618adc
 system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so|6befbe5244546687162a320a86787c66c60675cf
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so|662bccc5d4b40a79a47928c8957bfdff9f013e66
@@ -1621,14 +1615,14 @@ vendor/etc/init/imsdatadaemon.rc
 vendor/etc/init/imsqmidaemon.rc
 vendor/etc/init/imsrcsd.rc
 vendor/etc/seccomp_policy/imsrtp.policy
-vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
-vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so
-vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so
-vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so
-vendor/lib64/com.qualcomm.qti.uceservice@2.0.so
-vendor/lib64/com.qualcomm.qti.uceservice@2.1.so
-vendor/lib64/com.qualcomm.qti.uceservice@2.2.so
-vendor/lib64/com.qualcomm.qti.uceservice@2.3.so
+vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so;MODULE_SUFFIX=_vendor
+vendor/lib64/com.qualcomm.qti.imscmservice@2.2.so;MODULE_SUFFIX=_vendor
+vendor/lib64/com.qualcomm.qti.uceservice@2.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/com.qualcomm.qti.uceservice@2.1.so;MODULE_SUFFIX=_vendor
+vendor/lib64/com.qualcomm.qti.uceservice@2.2.so;MODULE_SUFFIX=_vendor
+vendor/lib64/com.qualcomm.qti.uceservice@2.3.so;MODULE_SUFFIX=_vendor
 vendor/lib64/lib-imscmservice.so
 vendor/lib64/lib-imsdpl.so
 vendor/lib64/lib-imsqimf.so
@@ -1653,14 +1647,14 @@ vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.lpa@1.2.so
-vendor/lib64/vendor.qti.ims.callcapability@1.0.so
-vendor/lib64/vendor.qti.ims.callinfo@1.0.so
-vendor/lib64/vendor.qti.ims.factory@1.0.so
-vendor/lib64/vendor.qti.ims.factory@1.1.so
-vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
-vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
-vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
-vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
+vendor/lib64/vendor.qti.ims.callcapability@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.qti.ims.callinfo@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.qti.ims.factory@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.qti.ims.factory@1.1.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 
