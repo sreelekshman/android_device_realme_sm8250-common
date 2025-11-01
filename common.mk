@@ -138,7 +138,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.15.vendor \
     libutilscallstack.vendor \
     libvulkan \
-    memtrack.kona \
     vendor.display.config@1.9.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor \
@@ -151,9 +150,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@4.0.vendor \
     libcrypto_shim.vendor
 
-PRODUCT_PACKAGES += \
-    gralloc.kona \
-    memtrack.kona
+# PRODUCT_PACKAGES += \
+#     gralloc.kona \
+#     memtrack.kona
 
 PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
@@ -259,8 +258,8 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
 # Light
-PRODUCT_PACKAGES += \
-    android.hardware.light-service.oplus
+# PRODUCT_PACKAGES += \
+#     android.hardware.light-service.oplus
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -290,17 +289,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
 
-# Neural networks
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor \
-    $(LOCAL_PATH)/media/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/video_system_specs.json
+# # Neural networks
+# PRODUCT_PACKAGES += \
+#     android.hardware.neuralnetworks@1.3.vendor \
+#     $(LOCAL_PATH)/media/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/video_system_specs.json
 
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp
 
 PRODUCT_PACKAGES += \
-    NfcNci \
     Tag \
     com.android.nfc_extras
 
@@ -319,28 +317,20 @@ PRODUCT_COPY_FILES += \
 # OMX
 PRODUCT_PACKAGES += \
     init.qti.media.sh \
-    libmm-omxcore \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
     libOmxVdec \
     libstagefrighthw
 
-# OPlusExtras
-PRODUCT_PACKAGES += \
-    OPlusExtras
+# # OPlusExtras
+# PRODUCT_PACKAGES += \
+#     OPlusExtras
 
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
-    EvolutionFrameworksResCommon \
     FrameworksResTarget \
     OPlusCarrierConfigResCommon \
-    OPlusExtrasResCommon \
     OPlusFrameworksResCommon \
     OPlusNfcResCommon \
     OPlusSettingsResCommon \
@@ -352,16 +342,21 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-bliss
 
 # Partition
+PRODUCT_PACKAGES += \
+    vendor_bt_firmware_mountpoint \
+    vendor_dsp_mountpoint \
+    vendor_firmware_mnt_mountpoint
+
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Perf
-PRODUCT_PACKAGES += \
-    libqti-perfd-client
+# # Perf
+# PRODUCT_PACKAGES += \
+#     libqti-perfd-client
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service.oplus-libperfmgr
+# # Power
+# PRODUCT_PACKAGES += \
+#     android.hardware.power-service.oplus-libperfmgr
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
@@ -479,8 +474,8 @@ $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 PRODUCT_PACKAGES += \
     vndservicemanager
 
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.common-V1-ndk_platform.vendor
+# PRODUCT_PACKAGES += \
+#     android.hardware.graphics.common-V1-ndk_platform.vendor
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v30/arm/arch-arm-armv7-a-neon/shared/vndk-core/libui.so:$(TARGET_COPY_OUT_VENDOR)/lib/libui-v30.so

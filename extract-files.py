@@ -39,10 +39,7 @@ lib_fixups: lib_fixups_user_type = {
     (
         'com.qti.stats.pdlib',
         'com.qualcomm.qti.dpm.api@1.0',
-        'libhistogram',
         'libmmosal',
-        'libsdedrm',
-        'libsdmcore',
         'vendor.qti.hardware.wifidisplaysession@1.0',
         'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,
@@ -55,6 +52,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service': blob_fixup()
+        .replace_needed('vendor.oplus.hardware.performance@1.0.so', 'vendor.oplus.hardware.performance-V1-ndk_platform.so'),
     'vendor/etc/msm_irqbalance.conf': blob_fixup()
         .regex_replace('IGNORED_IRQ=27,23,38$', 'IGNORED_IRQ=27,23,38,115,332'),
     ('odm/lib64/libCOppLceTonemapAPI.so', 'odm/lib64/libYTCommon.so', 'odm/lib64/libaps_frame_registration.so'): blob_fixup()
