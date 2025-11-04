@@ -634,7 +634,7 @@ odm/lib64/libFilterWrapper.so
 odm/lib64/libHdrVideo.so
 odm/lib64/libNightVideo.so
 odm/lib64/libOGLManager.so
-odm/lib64/libOPLUS_SCPortrait.so
+odm/lib64/libOPLUS_SCPortrait.so;FIX_SONAME
 odm/lib64/libPerfectColor.so
 odm/lib64/libPerfectlyClearCrux.so
 odm/lib64/libPerfectlyClearCruxOpt.so
@@ -653,11 +653,11 @@ odm/lib64/libSuperRaw.so
 odm/lib64/libSuperTextWrapper.so
 odm/lib64/libTrafficMode.so
 odm/lib64/libVDBayerHDR.so
-odm/lib64/libVDBlurless.so
+odm/lib64/libVDBlurless.so;FIX_SONAME
 odm/lib64/libVDDualCameraBlurlessAPI.so
 odm/lib64/libVDExternal.so
 odm/lib64/libVDPostureDetection.so
-odm/lib64/libVDSuperPhotoAPI.so
+odm/lib64/libVDSuperPhotoAPI.so;FIX_SONAME
 odm/lib64/libVDUpScale.so
 odm/lib64/libVideoEnhance.so
 odm/lib64/libWaterMark.so
@@ -675,8 +675,8 @@ odm/lib64/libaisd.so
 odm/lib64/libaiseg.so
 odm/lib64/libalCFR.so
 odm/lib64/libancbase_rt_bokeh.so
-odm/lib64/libancbase_rt_fusion.so
-odm/lib64/libancbase_rt_retain.so
+odm/lib64/libancbase_rt_fusion.so;FIX_SONAME
+odm/lib64/libancbase_rt_retain.so;FIX_SONAME
 odm/lib64/libancbase_segbase.so
 odm/lib64/libancbase_segment.so
 odm/lib64/libaps_frame_registration.so
@@ -685,7 +685,7 @@ odm/lib64/libapsexif.so
 odm/lib64/libapsjpeg.so
 odm/lib64/libapspng.so
 odm/lib64/libarc_eis.so
-odm/lib64/libarc_eis_custom.so
+odm/lib64/libarc_eis_custom.so;FIX_SONAME
 odm/lib64/libarcsoft_aicolor_image.so
 odm/lib64/libarcsoft_aicolor_video.so
 odm/lib64/libarcsoft_distortion_correction.so
@@ -705,7 +705,7 @@ odm/lib64/libarcsoft_high_dynamic_range_v4.so
 odm/lib64/libarcsoft_hta.so
 odm/lib64/libarcsoft_lensstaindetection.so
 odm/lib64/libarcsoft_low_light_hdr.so
-odm/lib64/libarcsoft_low_light_hdr_for_neon.so
+odm/lib64/libarcsoft_low_light_hdr_for_neon.so;FIX_SONAME
 odm/lib64/libarcsoft_pic_best.so
 odm/lib64/libarcsoft_portraitSN_hvx_stub.so
 odm/lib64/libarcsoft_portrait_super_night_raw.so
@@ -715,7 +715,7 @@ odm/lib64/libarcsoft_scbokeh_video.so
 odm/lib64/libarcsoft_smart_denoise.so
 odm/lib64/libarcsoft_smart_denoise_v4.so
 odm/lib64/libarcsoft_super_night_raw.so
-odm/lib64/libarcsoft_super_night_se_raw.so
+odm/lib64/libarcsoft_super_night_se_raw.so;DISABLE_CHECKELF
 odm/lib64/libarcsoft_supervideostabilization.so
 odm/lib64/libarcsoft_videoautozoom.so
 odm/lib64/libbsproxy.so
@@ -972,7 +972,7 @@ vendor/etc/Oppo_QC_LTM_Commercial_2020_01_03.pfm
 vendor/lib64/libhdr_tm.so
 
 # Display (HWC)
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
+vendor/bin/hw/vendor.qti.hardware.display.composer-service;DISABLE_CHECKELF
 vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libhistogram.so
 vendor/lib64/libqdutils.so
@@ -1061,7 +1061,7 @@ odm/lib64/vendor.qti.esepowermanager@1.0.so
 odm/lib64/vendor.qti.esepowermanager@1.1.so
 
 # Fingerprint
-odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
+odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service;DISABLE_CHECKELF
 odm/bin/init.oplus.fingerprints.sh
 odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
 odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml
@@ -1073,7 +1073,7 @@ odm/lib64/libgf_hal_G5.so
 odm/lib64/librpmbengclient.so
 odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so;MODULE_SUFFIX=_odm
 odm/lib64/vendor.oplus.hardware.commondcs@1.0.so
-vendor/lib64/libhvx_proxy_stub.so
+vendor/lib64/libhvx_proxy_stub.so;DISABLE_CHECKELF
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -1093,7 +1093,7 @@ vendor/lib/libCB.so|e0f57af9f73d0b3278ad39a2c4d2c8ca664de970
 vendor/lib/libOpenCL.so|394aeff57a5cbe0d2b101113072714e27bd177ce
 vendor/lib/libVkLayer_q3dtools.so
 vendor/lib/libadreno_utils.so|8c64fe7ba805523f6f7a3ab4cb4edc64c9ef0225
-vendor/lib/libc2d30_bltlib.so
+vendor/lib/libc2d30_bltlib.so;DISABLE_CHECKELF
 vendor/lib/libgsl.so|cc1e928ea52149f28ed684df37dbb84489da5e63
 vendor/lib/libllvm-glnext.so|2dc47bc240cd343c0619d79fc598aa79bc0bd897
 vendor/lib/libllvm-qcom.so|8e66562b48aa92c79cefcc9f8f4bc69c239c2c10
@@ -1108,7 +1108,7 @@ vendor/lib64/libCB.so|b645d076e016503b424c71440c1390f27b8546d1
 vendor/lib64/libOpenCL.so|db5641850b277aca366be1f7f4a549e407f5a894
 vendor/lib64/libVkLayer_q3dtools.so
 vendor/lib64/libadreno_utils.so|a68ecfffc454190cfc078c551c670f33a3f293cd
-vendor/lib64/libc2d30_bltlib.so
+vendor/lib64/libc2d30_bltlib.so;DISABLE_CHECKELF
 vendor/lib64/libgpudataproducer.so|c6b7099dd71dd236d36848c602a29daf97bdcf40
 vendor/lib64/libgsl.so|e358801fb0c05d1477ff0b49150cbc7aa1e00d92
 vendor/lib64/libllvm-glnext.so|d894ed891e972501d993892fa66337770900cdd4
@@ -1219,7 +1219,6 @@ vendor/etc/msm_irqbalance.conf
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
 vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
-vendor/etc/permissions/android.hardware.hardware_keystore.xml
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
